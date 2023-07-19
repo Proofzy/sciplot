@@ -51,7 +51,7 @@ template <typename T>
 auto str(const T& val) -> std::string
 {
     std::stringstream ss;
-    ss << val;
+    ss << std::fixed << val;
     return ss.str(); // Note: This is different than std::to_string(i). For example, it works with custom types. Also, std::to_string(2.0) may produce "2.000000", difficulting string comparison in the tests.
 }
 

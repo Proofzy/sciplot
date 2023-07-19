@@ -747,6 +747,8 @@ inline auto Plot2D::repr() const -> std::string
     {
         script << "    " << m_drawspecs[i] << (i < n - 1 ? ", \\\n" : ""); // consider indentation with 4 spaces!
     }
+    script << "\npause mouse close\n";
+
     // Add an empty line after plots
     script << std::endl;
     // unset palette info if a palette was set
